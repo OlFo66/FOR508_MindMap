@@ -17,6 +17,7 @@ markmap:
 - %AppData%\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 - SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run
 - SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\RunOnce
+- SYSTEM\\<CurrentControlSet\>\Services - (if Start == 0x02 -> start at boot)
 ### Service Creation/Replacement
 #### HKML\SYSTEM\CurrentControlSet\Services
 - Start with 0x02 : Automatic
