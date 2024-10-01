@@ -535,8 +535,6 @@ It implies that accounts & systems used in the patch deployment process must be 
 - Volatility
 - Passware
 ### Performing Memory Analysis
-#### Schema
-- ![Schema](./KDBG.png)
 #### Identify Rogue Processes
 ##### Artifacts
 - Image name: legitimate process, spelled correctly, matches system context
