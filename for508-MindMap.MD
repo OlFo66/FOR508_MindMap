@@ -23,9 +23,9 @@ markmap:
 - Start with 0x02 : Automatic
 - Start with 0x00 : Boot start of a device driver
 #### Links
-- [Mandiant APT1](https://for508.com/28vic/)
-- [Peering into GlassRAT](https://for508.com/wc1u-/)
-- [Stealthy Malware Persistence](https://for508.com/ojzea/)
+- [Mandiant APT1](https://contagiodump.blogspot.com/2013/03/mandiant-apt1-samples-categorized-by.html)
+- [Peering into GlassRAT](https://paper.seebug.org/papers/APT/APT_CyberCriminal_Campagin/2015/2015.11.23.PEERING_INTO_GLASSRAT/GlassRAT-final.pdf)
+- [Stealthy Malware Persistence](https://isc.sans.edu/diary/Wipe+the+drive+Stealthy+Malware+Persistence+-+Part+2/15406)
 ### Scheduled Tasks
 - C:\Windows\Tasks
 - C:\Windows\System32\Tasks
@@ -33,17 +33,16 @@ markmap:
 - If TaskScheduler & a process have the same PPID => process has been launched by the taskscheduler
 ### DLL Hijacking
 #### Links
-- [Malware Persistence without the Windows Registry](https://for508.com/v2su7/)
-- [DLL Search order](https://for508.com/9j5np/)
-- [Phantom DLL](https://for508.com/m4frx/)
-- [What The Fxsst](https://for508.com/sgeyk/)
-- [DLL Side-Loader](https://for508.com/z8ni0/)
-- [NetTraveler](https://for508.com/78nj2/)
-- [DLL rules in AppLocker](https://for508.com/lkpf9/)
+- [Malware Persistence without the Windows Registry](https://cloud.google.com/blog/topics/threat-intelligence/malware-persistence-windows-registry/)
+- [DLL Search order](https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order)
+- [Phantom DLL](https://www.hexacorn.com/blog/2013/12/08/beyond-good-ol-run-key-part-5/)
+- [What The Fxsst](https://web.archive.org/web/20211008221934/https://www.fireeye.com/blog/threat-research/2011/06/fxsst.html)
+- [NetTraveler](https://www.proofpoint.com/us/threat-insight/post/nettraveler-apt-targets-russian-european-interests)
+- [DLL rules in AppLocker](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/applocker/dll-rules-in-applocker)
 #### Hunting
 - File System analyse: search .dll/.exe in unusual path
 - Memory analyse: search DLL loaded from wrong location
-- [Hunting with Velociraptor](https://for508.com/tsgpy/)
+- [Hunting with Velociraptor](https://docs.velociraptor.app/blog/2021/2021-02-02-detecting-dll-hijacking-with-vql-e9a735354257/)
 ### WMI Event Consumers
 #### Info
 - Event Filter + Event Consumer + Binding => WMI
@@ -56,11 +55,9 @@ markmap:
 - Get-WMIObject -Namespace rootSubscription -Class __EventConsumer
 - Get-WMIObject -Namespace rootSubscription -Class __FilterToConsumerBinding
 #### Links
-- [Monitoring Events](https://for508.com/2jh-f/)
-- [Stuxnet Under Microscope](https://for508.com/lj9em/)
-- [There's nothing About WMI](https://for508.com/kc36x/)
-- [Kansa & WMI Event Consumer](https://for508.com/c36i8/)
-- [ELK Stack](https://for508.com/q1r94/)
+- [Monitoring Events](https://learn.microsoft.com/fr-fr/windows/win32/wmisdk/monitoring-events?redirectedfrom=MSDN)
+- [There's nothing About WMI](https://www.youtube.com/watch?app=desktop&v=JCJl2uV8u1c)
+- [Kansa & WMI Event Consumer](https://trustedsignal.blogspot.com/2014/05/kansa-collecting-wmi-event-consumer.html)
 ### More Advanced
 - Local GPO
 - MS Office Add-In
@@ -115,10 +112,10 @@ markmap:
 - WDigest & TsPkg creds no longer stored by default
 - Domain protected users (mitiagte Pass The Hash attacks)
 ##### Links
-- [Microsoft Security Advisory Update to Improve credentials Protection](https://for508.com/q1v9h)
-- [Technet credentials protection & Mgmt](https://for508.com/306oh/)
-- [Blocking remote use of local accounts](https://for508.com/zve0b)
-- [Local Administrator Password solution](https://for508.com/mbrx6)
+- [Microsoft Security Advisory Update to Improve credentials Protection](https://support.microsoft.com/en-us/topic/microsoft-security-advisory-update-to-improve-credentials-protection-and-management-may-13-2014-93434251-04ac-b7f3-52aa-9f951c14b649)
+- [Technet credentials protection & Mgmt](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408190(v=ws.11)?redirectedfrom=MSDN)
+- [Blocking remote use of local accounts](https://learn.microsoft.com/fr-fr/archive/blogs/secguide/blocking-remote-use-of-local-accounts)
+- [Local Administrator Password solution](https://learn.microsoft.com/en-us/previous-versions/mt227395(v=msdn.10)?redirectedfrom=MSDN)
 #### Token
 ##### Hunting / Defending
 - Investigate users with SeImpersonate privilege
@@ -126,13 +123,13 @@ markmap:
 - Use "Restricted Admin
 - Use "Protected Users" security group
 ##### Links
-- [Safeguarding Access Tokens](http://for508.com/zmyn0)
-- [Security implications of Windows Acess Token](http://for508.com/6zblt)
-- [Monitoring delegation Token](http://for508.com/4nv9m)
-- [Safeguarding Access Tokens](http://for508.com/6c0n3)
-- [Technet credentials protection & mgmt](http://for508.com/k69i3)
-- ["Account is sensitive & cannot be delegated"](http://for508.com/khltc)
-- [Technet Protected Users Security Group](http://for508.com/hm6po)
+- [Safeguarding Access Tokens](https://www.sans.org/blog/protecting-privileged-domain-accounts-safeguarding-access-tokens/)
+- [Security implications of Windows Acess Token](https://dl.packetstormsecurity.net/papers/presentations/mwri_security-implications-of-windows-access-tokens_2008-04-14.pdf )
+- [Monitoring delegation Token](https://www.sans.org/blog/monitoring-for-delegation-token-theft/)
+- [Safeguarding Access Tokens](https://www.sans.org/blog/protecting-privileged-domain-accounts-safeguarding-access-tokens/)
+- [Technet credentials protection & mgmt](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408190(v=ws.11)?redirectedfrom=MSDN)
+- ["Account is sensitive & cannot be delegated"](https://learn.microsoft.com/fr-fr/archive/blogs/poshchap/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts)
+- [Technet Protected Users Security Group](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466518(v=ws.11)?redirectedfrom=MSDN)
 #### Cached credentials
 ##### Info
 - Cannot be used for Pass-The-Hash attack
@@ -145,8 +142,8 @@ markmap:
 - Use of Protected Users security groups
 - Enforce password length
 ##### Links
-- [Cached logons & CachedLogonsCount](http://for508.com/q09hg)
-- [Domain Controller Security Technical Implementation Guide](http://for508.com/lwutc)
+- [Cached logons & CachedLogonsCount](https://learn.microsoft.com/en-us/troubleshoot/windows-server/user-profiles-and-logon/cached-domain-logon-information)
+- [Domain Controller Security Technical Implementation Guide](https://www.stigviewer.com/stig/windows_server_20122012_r2_domain_controller/)
 #### LSA secrets
 ##### Info
 - Stored in the registry to allow services or tasks to be run with user privileges
@@ -159,7 +156,7 @@ markmap:
 - Reduce number of services requiring domain accounts
 - Use (Group) Managed Service Accounts
 ##### Links
-- [Avoid password mgmt with group managed services accounts](http://for508.com/80156)
+- [Avoid password mgmt with group managed services accounts](https://blog.stangroome.com/2013/07/28/avoid-password-management-with-group-managed-service-accounts/)
 #### Tickets
 ##### Info
 - Tickets are generated by Kerberos
@@ -183,19 +180,19 @@ markmap:
 - Remote Credential Guard
 - Long & complex passwords on service accounts
 ##### Links
-- [Protecting Windows Networkds - Kerberos Attacks](http://for508.com/l-zh8)
-- [Protection from Kerberos Golden ticket](http://for508.com/i3-4q)
-- [Exploring the limitations of Remote Credential Guard](http://for508.com/90fi6)
-- [Github Kerberoast](http://for508.com/5acrs)
-- [Kerberos in the Crosshairs: Golden tickets, Silver iickets, MITM and more](htt://for508.com/2d0ho)
+- [Protecting Windows Networkds - Kerberos Attacks](https://dfirblog.wordpress.com/2015/12/13/protecting-windows-networks-kerberos-attacks/)
+- [Protection from Kerberos Golden ticket](https://media.cert.europa.eu/static/WhitePapers/UPDATED%20-%20CERT-EU_Security_Whitepaper_2014-007_Kerberos_Golden_Ticket_Protection_v1_4.pdf)
+- [Exploring the limitations of Remote Credential Guard](https://www.cyberark.com/resources/blog/no-more-pass-the-hash-exploring-the-limitations-of-remote-credential-guard)
+- [Github Kerberoast](https://github.com/nidem/kerberoast)
+- [Kerberos in the Crosshairs: Golden tickets, Silver iickets, MITM and more](https://www.sans.org/blog/kerberos-in-the-crosshairs-golden-tickets-silver-tickets-mitm-and-more/)
 #### NTDS.DIT
 ##### Info
 - Stored in %SystemRoot%\NTDS
 - Location can be modified in HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters
 ##### Links
-- [GitHub - Bloodhound](http://for508.com/hfi9o)
-- [Automating the Empire with Death Star](http://for508.Com/2riwf)
--[GitHub - GoFetch](http://for508.com/xdt0p)
+- [GitHub - Bloodhound](https://github.com/BloodHoundAD/BloodHound)
+- [Automating the Empire with Death Star](https://byt3bl33d3r.github.io/automating-the-empire-with-the-death-star-getting-domain-admin-with-a-push-of-a-button.html)
+-[GitHub - GoFetch](https://github.com/GoFetchAD/GoFetch)
 
 ## Program Execution
 #### Prefetch
@@ -217,9 +214,9 @@ markmap:
 ##### Tool
 - Zimmerman's tool: PECmd.exe
 ##### Links
-- [Prefetch Hash Calculator](http://for508.com/rlhjb)
-- [Disabling Prefetch](http://for508.com/dv689)
-- [Wht's new in Windows Application Execution](http://for508.com/wu15h)
+- [Prefetch Hash Calculator](http://www.hexacorn.com/blog/2012/06/13/prefetch-hash-calculator-a-hash-lookup-table-xpvistaw7w2k3w2k8/)
+- [Disabling Prefetch](https://learn.microsoft.com/en-us/previous-versions/windows/embedded/ms940847(v=winembedded.5)?redirectedfrom=MSDN)
+- [Wht's new in Windows Application Execution](https://www.sans.org/blog/what-is-new-in-windows-application-execution/)
 #### ShimCache
 ##### Info
 - Original purpose: identify if an app needs to be shimmed for retro-compatibility
@@ -233,12 +230,12 @@ markmap:
 - SYSTEM\CurrentControlSet\Control\SessionManager\AppCompatCache\AppCompatCache (Win7+) - 1024 entries, InsertFlag gives some indication of execution but it is not definitive
 - SYSTEM\CurrentControlSet\Control\SessionManager\AppCompatibility\AppCompatCache (WinXP-) - 96 entries, (2003 - up to 512)
 ##### Links
-- [Secrets of the Aplication Compatibility Database](http://for508.com/g2msb)
-- [Understanding Shims](http://for508.com/cyh3t)
-- [Leveraging the application compatibility Cache in forensic investigation](http://for508.com/7pnmg)
+- [Secrets of the Aplication Compatibility Database](https://web.archive.org/web/20191115211402/http://www.alex-ionescu.com/?p=39)
+- [Understanding Shims](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-7/dd837644(v=ws.10)?redirectedfrom=MSDN)
+- [Leveraging the application compatibility Cache in forensic investigation](https://web.archive.org/web/20190209113245/https://www.fireeye.com/content/dam/fireeye-www/services/freeware/shimcache-whitepaper.pdf)
 ##### Tools
-- [Zimmerman's AppCompatCacheParser](http://for508.com/tk6mb)
-- [Mandiant's ShimCacheParser](http://for508.com/ll4xr) 
+- [Zimmerman's AppCompatCacheParser](https://github.com/EricZimmerman/AppCompatCacheParser)
+- [Mandiant's ShimCacheParser](https://github.com/mandiant/ShimCacheParser) 
 #### AmCache
 ##### Info
 - Win7+ only
@@ -256,8 +253,8 @@ We then can use the "ProgramId" to pivot to "InventoryApplication" to get more i
 we can look for anomalies hashes, signature, metadata or modification time (matching suspicious activity timeframe)
 ##### Tools
 - [Zimmerman's AmcacheParser](https://github.com/EricZimmerman/AmcacheParser)
-- [appcompatprocessor.py](http://for508.com/7k3oi)
-- [ShimCache & Amcache enterprise-wide hunting](http://for508.com/hg6uy)
+- [appcompatprocessor.py](https://github.com/mbevilacqua/appcompatprocessor)
+- [ShimCache & Amcache enterprise-wide hunting](https://www.youtube.com/watch?v=-0bYcD3_bBs)
 ##### Links
 
 ## Lateral Movement
@@ -485,7 +482,7 @@ It implies that accounts & systems used in the patch deployment process must be 
 #### Vulnerability Exploitation
 - Patch it !!!
 ### Links
-- [RDP Bitmap Cache parser](http://for508.com/xp-gf)
+- [RDP Bitmap Cache parser](https://github.com/ANSSI-FR/bmc-tools)
 
 ## (Native) EventLogs
 |What|EvtxName|EventID|
@@ -518,11 +515,10 @@ It implies that accounts & systems used in the patch deployment process must be 
 - SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management
 #### Links/Info
 - MemProcFS can analyse these page files
--[PMEM Memory acquisition suite](http://for508.com/erw8g)
--[Varieties of Kernel-Mode Dump files](http://for508.com/b4d1f)
--[Overview of memory dump file options for Windows](http://for508.com/9qc31)
--[Win8/2012: the new swap file](http://for508.com/mnzdt)
--[VMWare snapshot file](http://for508.com/erw8g)
+-[PMEM Memory acquisition suite](https://github.com/Velocidex/c-aff4)
+-[Varieties of Kernel-Mode Dump files](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/varieties-of-kernel-mode-dump-files)
+-[Overview of memory dump file options for Windows](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/memory-dump-file-options)
+-[Win8/2012: the new swap file](https://learn.microsoft.com/en-us/archive/blogs/supportingwindows/windows-8-windows-server-2012-the-new-swap-file)
 ### Hibernation file tools
 #### Decompress to raw
 - Volatility v2's imagecopy plugin
@@ -596,26 +592,26 @@ It implies that accounts & systems used in the patch deployment process must be 
 #### Audit drivers and rootkit detection
 #### Dump suspicious processes & drivers
 ### Links/Info
-- [Finding Kernel Global Variables](https://for508.com/b7s4n)
-- [Volatility CheatSheet](https://for508.com/lz8pi)
-- [Memory baseliner](http://for508.com/6elpx)
-- [DarkCommat in memory](http://for508.com/twmsu)
-- [Well known Security Identifier](http://for508.com/q-lr9)
-- [Access Token](http://for508.com/a0csp)
-- [How Access Tokens work](http://for508.com/7bgul)
+- [Finding Kernel Global Variables](https://moyix.blogspot.com/2008/04/finding-kernel-global-variables-in.html)
+- [Volatility CheatSheet](https://blog.onfvp.com/post/volatility-cheatsheet/)
+- [Memory baseliner](https://github.com/csababarta/volatility_plugins/blob/master/baseline.py)
+- [DarkCommat in memory](http://www.tekdefense.com/news/2013/12/23/analyzing-darkcomet-in-memory.html)
+- [Well known Security Identifier](https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/manage/understand-security-identifiers)
+- [Access Token](https://learn.microsoft.com/fr-fr/windows/win32/secauthz/access-tokens?redirectedfrom=MSDN)
+- [How Access Tokens work](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc783557(v=ws.10)?redirectedfrom=MSDN)
 - CobaltStrike often use the same NamedPipe names: MSSE-####-server
 - CobaltStrike often use the same NamedPipe names: msagent_##
 - CobaltStrike often use the same NamedPipe names: status_##
 - CobaltStrike often use the same NamedPipe names: postex_ssh_####
 - CobaltStrike often use the same NamedPipe names: \\.\pipe\####### (from 7 to 10 #)
 - CobaltStrike often use the same NamedPipe names: postex_####
-- [MemProcFS tool](http://for508.com/hmkfw)
-- [Harmony security Reflective DLL injection](http://for508.com/qnl7j)
-- [Analyzing Malware Hollow process](http://for508.com/qor98)
-- [Detecting deceptiv hollowing techniques](http://for508.com/3gyvm)
-- [Threadmap](http://for508.com/pti8a)
-- [PTEMalfind](http://for508.com/jbged)
-- [Gargoyle memory scanning evasion technique](http://for508.com/uekxd)
+- [MemProcFS tool](https://github.com/ufrisk/MemProcFS)
+- [Harmony security Reflective DLL injection](https://www.dc414.org/wp-content/uploads/2011/01/242.pdf)
+- [Analyzing Malware Hollow process](https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/analyzing-malware-hollow-processes/)
+- [Detecting deceptiv hollowing techniques](https://cysinfo.com/detecting-deceptive-hollowing-techniques/)
+- [Threadmap](https://github.com/kslgroup/threadmap/blob/master/threadmap%20documentation.pdf)
+- [PTEMalfind](https://insinuator.net/2021/12/release-of-pte-analysis-plugins-for-volatility-3/)
+- [Gargoyle memory scanning evasion technique](https://github.com/JLospinoso/gargoyle)
 - [Moneta Github](http://github.com/forrest-orr/moneta)
-- [Hollow Hunter](http://for508.com/7yr4o)
-- [Harmony security Reflective DLL injection](http://for508.com/qnl7j)
+- [Hollow Hunter](https://github.com/hasherezade/hollows_hunter)
+- [Harmony security Reflective DLL injection](https://www.dc414.org/wp-content/uploads/2011/01/242.pdf)
