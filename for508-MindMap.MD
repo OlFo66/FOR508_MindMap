@@ -1,11 +1,9 @@
 ---
-title: Windows Forensics
+title: Windows Forensics 1/2
 markmap:
     colorFreezeLevel: 2
     initialExpandLevel: 2
 ---
-//# FOR500
-//# FOR508
 ## Malware Persistence
 ### AutoStart locations
 - NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Run
